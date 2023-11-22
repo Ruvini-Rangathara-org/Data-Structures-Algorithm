@@ -55,4 +55,10 @@ public class Stack {
         return top + 1;
     }
 
+    public void growStack(){
+        int[] newElementData = new int[elementData.length * 2];
+        System.arraycopy(elementData, 0, newElementData, 0, elementData.length);
+        elementData = newElementData;
+    }
+
 }

@@ -5,6 +5,8 @@ public class Main {
 
         Stack stack = new Stack(10);
 
+//        stack.pop();
+
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -50,6 +52,8 @@ public class Main {
 
         int size = stack.size();
         System.out.println("Size: " + size);
+
+        stack.growStack();
 
     }
 }
