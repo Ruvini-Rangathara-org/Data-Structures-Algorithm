@@ -41,10 +41,21 @@ public class Main {
 
         linkedList.printList();
 
-//        linkedList.insertSpecificPosition(100, 0);
-//        linkedList.printList();
 
-        linkedList.deleteBySpecificPosition(0);
-        linkedList.printList();
+//        int size = linkedList.size();
+//        System.out.println("Size : "+size);
+//
+////        linkedList.insertSpecificPosition(100, 0);
+////        linkedList.printList();
+//
+//        linkedList.deleteBySpecificPosition(0);
+//        linkedList.printList();
+//
+//        size = linkedList.size();
+//        System.out.println("Size : "+size);
+
+        int data = linkedList.get(4);
+        System.out.println("Data at 2nd position is : "+data);
+
     }
 }

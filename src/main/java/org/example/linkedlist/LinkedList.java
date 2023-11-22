@@ -131,5 +131,21 @@ public class LinkedList {
         }
     }
 
+    public int get(int position){
+        if(position==0){
+            return head.data;
+        } else if (position <= size()) {
+            Node current = head;
+            int count=0;
+            while (count<=position){
+                if(count==position){
+                    return current.data;
+                }
+                count++;
+                current=current.next;
+            }
+        }
+        throw new RuntimeException("wrong position");
+    }
 
 }
