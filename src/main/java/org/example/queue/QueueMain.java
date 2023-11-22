@@ -1,4 +1,6 @@
-package org.example;
+package org.example.queue;
+
+import org.example.queue.Queue;
 
 /**
  * Description:

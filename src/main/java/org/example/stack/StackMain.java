@@ -1,4 +1,6 @@
-package org.example;
+package org.example.stack;
+
+import org.example.stack.Stack;
 
 public class StackMain {
     public static void main(String[] args) {
