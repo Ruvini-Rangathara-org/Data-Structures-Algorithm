@@ -22,22 +22,29 @@ public class Main {
         linkedList.insertAtBeginning(4);
         linkedList.insertAtBeginning(5);
 
-        linkedList.insertAtEnd(6);
-        linkedList.insertAtEnd(7);
-        linkedList.insertAtEnd(8);
+//        linkedList.insertAtEnd(6);
+//        linkedList.insertAtEnd(7);
+//        linkedList.insertAtEnd(8);
+//
+//        linkedList.printList();
+//        System.out.println("Size : "+linkedList.size());
+//
+//        linkedList.deleteFromBegin();
+//
+//        linkedList.printList();
+//        System.out.println("Size : "+linkedList.size());
+//
+//        linkedList.deleteFromEnd();
+//
+//        linkedList.printList();
+//        System.out.println("Size : "+linkedList.size());
 
         linkedList.printList();
-        System.out.println("Size : "+linkedList.size());
 
-        linkedList.deleteFromBegin();
+//        linkedList.insertSpecificPosition(100, 5);
+//        linkedList.printList();
 
+        linkedList.deleteBySpecificPosition(2);
         linkedList.printList();
-        System.out.println("Size : "+linkedList.size());
-
-        linkedList.deleteFromEnd();
-
-        linkedList.printList();
-        System.out.println("Size : "+linkedList.size());
-
     }
 }

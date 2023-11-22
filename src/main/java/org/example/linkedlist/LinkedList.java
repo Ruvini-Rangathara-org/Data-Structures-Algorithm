@@ -40,6 +40,25 @@ public class LinkedList {
         }
     }
 
+    public void insertSpecificPosition(int data, int position){
+        if (head!=null && position < size()){
+            Node node = new Node(data);
+            Node current = head;
+            Node previous = null;
+            int count =0;
+
+            while(count!=position){
+                count++;
+                previous=current;
+                current=current.next;
+            }
+            previous.next=node;
+            node.next=current;
+        }else{
+            System.out.println("Position is wrong!");
+        }
+    }
+
     public void printList(){
         System.out.print("List: ");
         Node current = head;
@@ -48,6 +67,20 @@ public class LinkedList {
             current = current.next;
         }
         System.out.println();
+    }
+
+    public int size(){
+        int count = 0;
+        Node current = head;
+        while(current != null){
+            count++;
+            current = current.next;
+        }
+        return count;
+    }
+
+    public boolean isEmpty(){
+        return head == null;
     }
 
     public void deleteFromBegin(){
@@ -70,18 +103,22 @@ public class LinkedList {
         previous.next = null;
     }
 
-    public int size(){
-        int count = 0;
-        Node current = head;
-        while(current != null){
-            count++;
-            current = current.next;
+    public void deleteBySpecificPosition(int position){
+        if(head!=null && position <size()){
+            Node previous = null;
+            Node current = head;
+            int count = 0;
+            while (count!=position){
+                count++;
+                previous=current;
+                current=current.next;
+            }
+            previous.next=current.next;
+        }else {
+            System.out.println("Wrong position!");
         }
-        return count;
+
     }
 
-    public boolean isEmpty(){
-        return head == null;
-    }
 
 }
