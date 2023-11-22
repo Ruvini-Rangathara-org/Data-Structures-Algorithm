@@ -41,10 +41,10 @@ public class Main {
 
         linkedList.printList();
 
-//        linkedList.insertSpecificPosition(100, 5);
+//        linkedList.insertSpecificPosition(100, 0);
 //        linkedList.printList();
 
-        linkedList.deleteBySpecificPosition(2);
+        linkedList.deleteBySpecificPosition(0);
         linkedList.printList();
     }
 }

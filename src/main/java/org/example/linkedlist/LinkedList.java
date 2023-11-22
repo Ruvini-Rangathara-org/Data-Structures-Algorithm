@@ -47,13 +47,20 @@ public class LinkedList {
             Node previous = null;
             int count =0;
 
-            while(count!=position){
-                count++;
-                previous=current;
-                current=current.next;
+            if(position==0){
+                node.next=head;
+                head=node;
+            }else{
+                while(count!=position){
+                    count++;
+                    previous=current;
+                    current=current.next;
+                }
+                previous.next=node;
+                node.next=current;
             }
-            previous.next=node;
-            node.next=current;
+
+
         }else{
             System.out.println("Position is wrong!");
         }
@@ -104,20 +111,24 @@ public class LinkedList {
     }
 
     public void deleteBySpecificPosition(int position){
-        if(head!=null && position <size()){
-            Node previous = null;
-            Node current = head;
-            int count = 0;
-            while (count!=position){
-                count++;
-                previous=current;
-                current=current.next;
-            }
-            previous.next=current.next;
-        }else {
-            System.out.println("Wrong position!");
-        }
 
+        if(position !=0){
+            if(head!=null && position <size()){
+                Node previous = null;
+                Node current = head;
+                int count = 0;
+                while (count!=position){
+                    count++;
+                    previous=current;
+                    current=current.next;
+                }
+                previous.next=current.next;
+            }else {
+                System.out.println("Wrong position!");
+            }
+        }else{
+            head=head.next;
+        }
     }
 
 
